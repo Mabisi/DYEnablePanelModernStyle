@@ -1,6 +1,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+// 正确声明JXCategoryListContainerView为UIView的子类
+@interface JXCategoryListContainerView : UIView
+@end
+
 // 分组1：URL过滤
 %group URLFilter
 %hook NSURL
