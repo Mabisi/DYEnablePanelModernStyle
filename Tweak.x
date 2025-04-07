@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-// 正确声明JXCategoryListContainerView为UIView的子类
-@interface JXCategoryListContainerView : UIView
+// 正确声明CNB4iPhone.CNBTableViewMainCell为UIView的子类
+@interface CNB4iPhone.CNBTableViewMainCell : UIView
 @end
 
 // 分组1：URL过滤
@@ -23,7 +23,7 @@
 
 // 分组2：菜鸟广告移除
 %group CaiNiaoAdRemoval
-%hook JXCategoryListContainerView
+%hook CNB4iPhone.CNBTableViewMainCell
 - (void)didMoveToSuperview {
     %orig;
     [self removeFromSuperview];
