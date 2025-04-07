@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-// 正确声明JXCategoryContentCollectionView为UIView的子类
-@interface JXCategoryContentCollectionView : UIView
+// 正确声明UlCollectionView为UIView的子类
+@interface UlCollectionView : UIView
 @end
 
 // 分组1：URL过滤
@@ -23,7 +23,7 @@
 
 // 分组2：菜鸟广告移除
 %group CaiNiaoAdRemoval
-%hook JXCategoryContentCollectionView
+%hook UlCollectionView
 - (void)didMoveToSuperview {
     %orig;
     [self removeFromSuperview];
